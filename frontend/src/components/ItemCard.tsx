@@ -1,12 +1,17 @@
 import { truncateText } from "../utils/textUtils";
 import { ItemDeatils } from "../pages/Home/data";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
     item: ItemDeatils
 }
 
 export function ItemCard({ item }: Props) {
+    const navigate = useNavigate();
 
+    const handleRedirect = (id : number) => {
+        navigate(`/product/${id}`)
+    }
 
     return(
         <div className="border-[0.65px] border-[#DBDBDB] w-[305px] h-[320px] rounded-[6.46px] bg-white   flex flex-col items-center justify-between p-[11.395px] pb-[25px]">
@@ -34,7 +39,7 @@ export function ItemCard({ item }: Props) {
             </div>
             {/* BUTTON */}
             <div className="w-full">
-                <button className="w-[281.86px] h-[41px] rounded-[25.83px] bg-black text-white font-semibold text-[16px]">
+                <button className="w-[281.86px] h-[41px] rounded-[25.83px] bg-black text-white font-semibold text-[16px] cursor-pointer" onClick={() => handleRedirect(item.id)}>
                     See details
                 </button>
             </div>
