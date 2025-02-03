@@ -16,7 +16,7 @@ export function ItemCard({ item }: Props) {
     return(
         <div className="border-[0.65px] border-[#DBDBDB] w-[305px] h-[320px] rounded-[6.46px] bg-white   flex flex-col items-center justify-between p-[11.395px] pb-[25px]">
             <div className="relative inline-block w-full h-[149.18px] rounded-[6.46px] overflow-hidden">
-                <img src={item.thumbnail} alt="itemThumbnail" className="object-contain w-full h-full rounded-[6.46px]"/> {/* TODO: In the figma design, the image should be object-cover */}
+                <img src={item.images[0]} alt="itemThumbnail" className="object-contain w-full h-full rounded-[6.46px]"/> {/* TODO: In the figma design, the image should be object-cover */}
                 <div className="absolute top-[9.67px] right-[9.67px] text-[14px] text-white w-[83px] h-[30px] rounded-[13.88px] bg-[#6100FF] font-semibold flex items-center justify-center"> {/* TODO: CREATE A component for this */}
                     <p className="">{'-' + item.discountPercentage + '%'}</p>
                 </div>

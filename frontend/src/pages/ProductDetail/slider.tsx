@@ -6,7 +6,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-export function ProductSlider() {
+interface Props {
+  images: string[];
+}
+
+
+export function ProductSlider({ images } : Props) {
     var settings = {
         dots: true,
         infinite: true,
@@ -18,7 +23,7 @@ export function ProductSlider() {
       };
 
     function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
+        const { className, onClick } = props;
         return(
           <div onClick={onClick} className={`arrow ${className}`} >
             <ChevronRight className="arrows" style={{color:"black"}}/>
@@ -27,26 +32,20 @@ export function ProductSlider() {
     }
       
     function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
+        const { className, onClick } = props;
         return(
           <div onClick={onClick} className={`arrow ${className}`} >
             <ChevronLeft className="arrows" style={{color:"black"}}/>
           </div>
         )
     }
-    /* TODO: Use color for the arrow which is active */
+
     return(
         <>
           <Slider {...settings} className="w-4/12">
-              <div className=""> {/* TODO: object-contain */}
-                  <img src="https://s3-alpha-sig.figma.com/img/fbec/9e1f/d0ae465204d6e44c78606ea8844e40f9?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iCBBh7wLrurphBSXj-CnWpYwT07s1CFEIEzylRsuhK98h9iNpPy0CHrwCp5TAL9gic0F-Yc5Juju3gEuC9UhgHYOE9QBMJoL5PfPoG0jMgcO~e6drMkGcspr3Jk0W987XRa5Z2qjYzhLtEPYU~CpbMis8DkZBcF4fQwXuDjcnD5gQ76ls21YkwGFNcq56scpzH5OtSwmpvkLZwyen6pApH8MXHxMsZW8nHu4GJJGhj1SmTa7IWMG94E66Th2~Z3~LwpfAjX~fHRXTU0e6a4IHsCCT2IkuqKsgBBxwlJGHj4py6c3NNxkmcDjvgTyE33I0JsmnpwaZSLw7rdMddqR1Q__" alt="Product Image 1" className="w-[502.4px] h-[481px] rounded-[6.01px] object-cover mx-auto"/>
-              </div>
-              <div className="">
-                  <img src="https://s3-alpha-sig.figma.com/img/fbec/9e1f/d0ae465204d6e44c78606ea8844e40f9?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iCBBh7wLrurphBSXj-CnWpYwT07s1CFEIEzylRsuhK98h9iNpPy0CHrwCp5TAL9gic0F-Yc5Juju3gEuC9UhgHYOE9QBMJoL5PfPoG0jMgcO~e6drMkGcspr3Jk0W987XRa5Z2qjYzhLtEPYU~CpbMis8DkZBcF4fQwXuDjcnD5gQ76ls21YkwGFNcq56scpzH5OtSwmpvkLZwyen6pApH8MXHxMsZW8nHu4GJJGhj1SmTa7IWMG94E66Th2~Z3~LwpfAjX~fHRXTU0e6a4IHsCCT2IkuqKsgBBxwlJGHj4py6c3NNxkmcDjvgTyE33I0JsmnpwaZSLw7rdMddqR1Q__" alt="Product Image 2" className="w-[502.4px] h-[481px] rounded-[6.01px] object-cover mx-auto"/>
-              </div>
-              <div className="">
-                  <img src="https://s3-alpha-sig.figma.com/img/fbec/9e1f/d0ae465204d6e44c78606ea8844e40f9?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=iCBBh7wLrurphBSXj-CnWpYwT07s1CFEIEzylRsuhK98h9iNpPy0CHrwCp5TAL9gic0F-Yc5Juju3gEuC9UhgHYOE9QBMJoL5PfPoG0jMgcO~e6drMkGcspr3Jk0W987XRa5Z2qjYzhLtEPYU~CpbMis8DkZBcF4fQwXuDjcnD5gQ76ls21YkwGFNcq56scpzH5OtSwmpvkLZwyen6pApH8MXHxMsZW8nHu4GJJGhj1SmTa7IWMG94E66Th2~Z3~LwpfAjX~fHRXTU0e6a4IHsCCT2IkuqKsgBBxwlJGHj4py6c3NNxkmcDjvgTyE33I0JsmnpwaZSLw7rdMddqR1Q__" alt="Product Image 3" className="w-[502.4px] h-[481px] rounded-[6.01px] object-cover mx-auto"/>
-              </div>
+            {images?.map((i) => (
+              <img src={i} alt="Product Image" key={i} className="w-[502.4px] h-[481px] rounded-[6.01px] object-contain mx-auto"/>
+            ))}
           </Slider>
         </>
     );
