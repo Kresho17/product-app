@@ -27,33 +27,32 @@ export function ItemCard({ item }: Props) {
     }
 
     return(
-        <div className="border-[0.65px] border-[#DBDBDB] w-[305px] h-[320px] rounded-[6.46px] bg-white   flex flex-col items-center justify-between p-[11.395px] pb-[25px]">
-            <div className="relative inline-block w-full h-[149.18px] rounded-[6.46px] overflow-hidden">
-                <img src={item.images[0]} alt="itemThumbnail" className="object-contain w-full h-full rounded-[6.46px]"/> {/* TODO: In the figma design, the image should be object-cover */}
-                <div className="absolute top-[9.67px] right-[9.67px] text-[14px] text-white w-[83px] h-[30px] rounded-[13.88px] bg-[#6100FF] font-semibold flex items-center justify-center"> {/* TODO: CREATE A component for this */}
+        <div className="border border-slate-200 w-75 h-80 rounded-lg bg-white flex flex-col items-center justify-between p-4 pb-6">
+            <div className="relative inline-block w-full h-35 rounded-lg overflow-hidden">
+                <img src={item.images[0]} alt="itemThumbnail" className="object-contain w-full h-full rounded-lg"/>
+                <div className="absolute top-2 right-2 text-sm text-white w-20 h-7 rounded-full bg-violet-700 font-semibold flex items-center justify-center"> {/* TODO: CREATE A component for this */}
                     <p className="">{'-' + item.discountPercentage + '%'}</p>
                 </div>
             </div>
             {/* TEXT */}
-            <div className="w-full flex-grow flex flex-col items-center text-center justify-between pt-[11.395px] text-[#323232]">
+            <div className="w-full flex-grow flex flex-col items-center text-center justify-between pt-1.5 text-gray-800">
                 {/* TITLE LINE */}
                 <div className="flex w-full justify-between items-center">
-                    <div className="text-[20px] font-[600] items-center">
+                    <div className="text-xl font-semibold items-center">
                         <p>{truncateText(item?.title || "", 18)}</p>
-                        {/* <p>{item?.title}</p> */}
                     </div>
-                    <div className="text-[24px] font-[600] no-wrap">
+                    <div className="text-2xl font-semibold no-wrap">
                         <p>{Math.floor(item?.price) + " $"}</p>
                     </div>
                 </div>
                 {/* DESCRIPTION */}
-                <div className="w-full text-[14px] font-[500] height-[40px] text-left align-left pb-[10px]">
+                <div className="w-full text-sm font-medium text-left pb-4">
                     <p className="w-10/12">{truncateText(item.description, 60)}</p>
                 </div>
             </div>
             {/* BUTTON */}
             <div className="w-full">
-                <button className="w-[281.86px] h-[41px] rounded-[25.83px] bg-black text-white font-semibold text-[16px] cursor-pointer" onClick={() => handleRedirect(item.id)}>
+                <button className="w-full h-10 rounded-full bg-black text-white font-semibold text-base cursor-pointer" onClick={() => handleRedirect(item.id)}>
                     See details
                 </button>
             </div>
