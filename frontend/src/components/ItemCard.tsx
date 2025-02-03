@@ -1,6 +1,19 @@
 import { truncateText } from "../utils/textUtils";
-import { ItemDeatils } from "../pages/Home/data";
 import { useNavigate } from "react-router-dom";
+
+// TODO: Find the place for this
+export interface ItemDeatils {
+    id:                 number;
+    title:              string;
+    description:        string;
+    discountPercentage: number;
+    price:              number;
+    rating:             number;
+    stock:              number;
+    brand:              string;
+    category:           string;
+    images:             string[];
+}
 
 interface Props {
     item: ItemDeatils
