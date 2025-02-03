@@ -26,10 +26,11 @@ export function ItemCard({ item }: Props) {
                 {/* TITLE LINE */}
                 <div className="flex w-full justify-between items-center">
                     <div className="text-[20px] font-[600] items-center">
-                        <p>{item.title}</p>
+                        <p>{truncateText(item?.title || "", 18)}</p>
+                        {/* <p>{item?.title}</p> */}
                     </div>
-                    <div className="text-[24px] font-[600]">
-                        <p>{item.price + " $"}</p>
+                    <div className="text-[24px] font-[600] no-wrap">
+                        <p>{Math.floor(item?.price) + " $"}</p>
                     </div>
                 </div>
                 {/* DESCRIPTION */}
