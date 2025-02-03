@@ -1,26 +1,44 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { truncateText } from "../../utils/textUtils";
 import { ProductSlider } from "./slider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-import { ItemData } from "../Home/data";
-
+import { useEffect, useState } from "react";
 
 
 export function ProductDetail() {
+    const navigate = useNavigate();
+    const { id } = useParams<{ id: string }>();
+    const [item, setItem] = useState<any>(null);
 
     const notify = (note : string) => {
         toast(note + " 🛒")
     };
 
-    const { id } = useParams<{ id: string }>();
+    useEffect(() => {
+        const fetchItem = async () => {
+            try {
+                const response = await fetch(`http://127.0.0.1:8000/api/products/${id}`);
+                if (!response.ok) {
+                    navigate("/404");
+                    return;
+                }
+                const data = await response.json();
+                setItem(data);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        if (id) {
+            fetchItem();
+        }
+    }, [id]);
 
 /*  async function getItem( id : number) {
         
     } */
-    const item = ItemData.find((item) => item.id === parseInt(id || "", 10));
-    console.log(item);
+/*     const item = ItemData.find((item) => item.id === parseInt(id || "", 10)); */
 
     return(
         <>
@@ -53,7 +71,7 @@ export function ProductDetail() {
                         </div>
                         <div className="flex flex-row justify-between items-center text-[#323232]">
                             <p className="text-[64px] font-semibold">
-                                {item?.price + " $"}
+                                {Math.floor(item?.price) + " $"}
                             </p>
                             <button className="w-[267px] h-[65px] rounded-[30px] bg-black text-white font-semibold text-[28px] cursor-pointer" onClick={() => notify("Add to cart!")}>
                                 Add to cart
