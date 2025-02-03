@@ -1,0 +1,478 @@
+[
+    {
+      "model": "products.Product",
+      "pk": 1,
+      "fields": {
+        "title": "iPhone 9",
+        "description": "An apple mobile which is nothing like apple",
+        "discountPercentage": 12.96,
+        "price": 549.00,
+        "rating": 4.30,
+        "brand": "Apple",
+        "stock": 96,
+        "category": "smartphone",
+        "images": [
+          "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+          "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+          "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+        ]
+      }
+    },
+    {
+      "model": "products.Product",
+      "pk": 2,
+      "fields": {
+        "title": "Samsung Galaxy S21",
+        "description": "A sleek and powerful Samsung smartphone with cutting-edge technology",
+        "discountPercentage": 15.50,
+        "price": 799.00,
+        "rating": 4.30,
+        "brand": "Samsung",
+        "stock": 96,
+        "category": "smartphone",
+        "images": [
+          "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+          "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+          "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+        ]
+      }
+    },
+    {
+      "model": "products.Product",
+      "pk": 3,
+      "fields": {
+        "title": "Google Pixel 5",
+        "description": "The latest Google smartphone with an amazing camera and smooth experience",
+        "discountPercentage": 10.30,
+        "price": 699.00,
+        "rating": 4.30,
+        "brand": "Google",
+        "stock": 96,
+        "category": "smartphone",
+        "images": [
+          "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+          "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+          "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+        ]
+      }
+    },
+    {
+      "model": "products.Product",
+      "pk": 4,
+      "fields": {
+        "title": "OnePlus 9 Pro",
+        "description": "A high-performance phone with an elegant design and fast charging",
+        "discountPercentage": 20.70,
+        "price": 999.00,
+        "rating": 4.30,
+        "brand": "OnePlus",
+        "stock": 96,
+        "category": "smartphone",
+        "images": [
+          "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+          "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+          "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+        ]
+      }
+    },
+    {
+      "model": "products.Product",
+      "pk": 5,
+      "fields": {
+        "title": "Xiaomi Mi 11",
+        "description": "An affordable flagship with powerful hardware and a stunning display",
+        "discountPercentage": 18.90,
+        "price": 749.00,
+        "rating": 4.30,
+        "brand": "Xiaomi",
+        "stock": 96,
+        "category": "smartphone",
+        "images": [
+          "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+          "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+          "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+        ]
+      }
+    },
+    {
+        "model": "products.Product",
+        "pk": 6,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 7,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 8,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 9,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 10,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 11,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 12,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 13,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 14,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 15,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 16,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 17,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 18,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 19,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 20,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 21,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 22,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 23,
+        "fields": {
+            "title": "Vivo X60 Pro",
+            "description": "A high-end smartphone with a focus on photography and professional performance",
+            "discountPercentage": 12.50,
+            "price": 899.00,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 24,
+        "fields": {
+            "title": "Honor 50 Pro",
+            "description": "A well-rounded smartphone with good performance and a great display",
+            "discountPercentage": 11.7,
+            "price": 799,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      },
+      {
+        "model": "products.Product",
+        "pk": 25,
+        "fields": {
+            "title": "Apple iPhone 12",
+            "description": "The premium iPhone with an improved camera, sleek design, and 5G support",
+            "discountPercentage": 10.9,
+            "price": 949,
+            "rating": 4.30,
+            "brand": "Apple",
+            "stock": 96,
+            "category": "smartphone",
+            "images": [
+                "https://image.alza.cz/products/NL244a1g5/NL244a1g5.jpg?width=500&height=500",
+                "https://image.alza.cz/products/UM331b1/UM331b1.jpg?width=360&height=360",
+                "https://image.alza.cz/products/MR098b01/MR098b01.jpg?width=1000&height=1000"
+            ]
+        }
+      }
+  ]
+  
