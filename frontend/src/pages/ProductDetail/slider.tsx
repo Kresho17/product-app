@@ -44,7 +44,7 @@ export function ProductSlider({ images } : Props) {
         <>
           <Slider {...settings} className="w-4/12">
             {images?.map((i) => (
-              <img src={i} alt="Product Image" key={i} className="w-[502.4px] h-[481px] rounded-[6.01px] object-contain mx-auto"/>
+              <img src={i} alt="Product Image" key={i} className="w-lg h-120 rounded-md object-contain mx-auto"/>
             ))}
           </Slider>
         </>

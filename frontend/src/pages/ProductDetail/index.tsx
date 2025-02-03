@@ -4,6 +4,7 @@ import { ProductSlider } from "./slider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from "react";
+import StarIcon from "../../utils/icons";
 
 
 export function ProductDetail() {
@@ -35,45 +36,44 @@ export function ProductDetail() {
         }
     }, [id]);
 
-/*  async function getItem( id : number) {
-        
-    } */
-/*     const item = ItemData.find((item) => item.id === parseInt(id || "", 10)); */
 
     return(
         <>
         <div className="flex justify-center items-center h-screen text-left">
-            <div className="flex flex-row w-10/12 mx-auto justify-center items-center">
+            <div className="flex flex-row w-10/12 mx-auto justify-center items-center space-x-20">
                 {/* Image with paganition */}
                 <ProductSlider images={item?.images ?? []}/>
                 {/* Details */}
-                <div className="flex items-center ml-[100px]">
-                    <div className="flex-col">
-                        <div className="flex justify-between">
-                            <div className="text-[48px] font-semibold text-[#323232]">
+                <div className="flex-grow">
+                    <div className="flex-col flex-grow p-32">
+                        <div className="flex justify-between pb-3">
+                            <div className="text-5xl font-semibold text-gray-800">
                                 {item?.title}
                             </div>
-                            <div className="text-[24px] font-semibold">
-                                {item?.rating}
+                            <div className="text-2xl font-semibold flex flex-row items-centes justify-between space-x-3">
+                                <div className="flex items-center">
+                                {[...Array(5)].map((_, index) => (
+                                    <StarIcon key={index} color={index < (Math.floor(item?.rating)) ? "#7f22fe" : "silver"} />
+                                ))}
+                                </div>
+                                <div className="flex items-center">
+                                    {item?.rating}
+                                </div>
                             </div>
                         </div>
                         {/* DESCRIPTION */}
-                        <div className="w-8/12">  {/* TODO: The description box should be wider  and it is changeing in different length*/}
-                            <p className="font-medium text-[24px] leading-[32.4px]">{truncateText(item?.description || "", 80)}</p>  {/* TODO: Show all the text with scrollable container */}
+                        <p className="w-8/12 font-medium text-2xl leading-8">{item?.description}</p>
+                        <div className=" text-black/60 py-2">
+                            <p className="font-medium text-2xl leading-8 py-1">Stock: {item?.stock}</p>
+                            <p className="font-medium text-2xl leading-8 py-1">Brand: {item?.brand}</p>
+                            <p className="font-medium text-2xl leading-8 py-1">Category: {item?.category}</p>
                         </div>
-                        <div className="flex flex-col text-black/60 py-2">
-                            <p className="font-medium text-[24px] leading-[32.4px] py-1">Stock: {item?.stock}</p>
-                            <p className="font-medium text-[24px] leading-[32.4px] py-1">Brand: {item?.brand}</p>
-                            <p className="font-medium text-[24px] leading-[32.4px] py-1">Category: {item?.category}</p>
-                        </div>
-                        <div className="text-[20px] text-white w-[121.73px] h-[44px] rounded-[20.35px] bg-[#6100FF] font-semibold flex items-center justify-center"> {/* TODO: CREATE A component for this */}
-                            <p>{'-' + item?.discountPercentage + '%'}</p>
-                        </div>
-                        <div className="flex flex-row justify-between items-center text-[#323232]">
-                            <p className="text-[64px] font-semibold">
+                        <p className="text-xl text-white w-32 h-10 rounded-full bg-violet-700 font-semibold flex items-center justify-center">{'-' + item?.discountPercentage + '%'}</p>
+                        <div className="flex flex-row justify-between items-center text-gray-800">
+                            <p className="text-6xl font-semibold">
                                 {Math.floor(item?.price) + " $"}
                             </p>
-                            <button className="w-[267px] h-[65px] rounded-[30px] bg-black text-white font-semibold text-[28px] cursor-pointer" onClick={() => notify("Add to cart!")}>
+                            <button className="w-70 h-16 rounded-full bg-black text-white font-semibold text-3xl cursor-pointer" onClick={() => notify("Add to cart!")}>
                                 Add to cart
                             </button>
                         </div>

@@ -46,8 +46,8 @@ export function Home() {
     return (
         <>
             <div className="flex flex-col items-center">
-                <h1 className="text-[48px] font-semibold text-[#323232] pt-[50px] text-center">See Products</h1>
-                <div className="flex justify-center items-center py-[49px]">
+                <h1 className="text-5xl font-semibold text-gray-800 pt-16 text-center">See Products</h1>
+                <div className="flex justify-center items-center py-16">
                     <InfiniteScroll
                         dataLength={items.length}
                         next={() => fetchItems(page)}
@@ -55,7 +55,7 @@ export function Home() {
                         loader={<h4 className="my-6" >Loading...</h4>}
                         endMessage={<p className="my-6">No more products available</p>}
                     >
-                        <div className="grid xl:grid-cols-4 gap-x-[16px] gap-y-[21px] lg:grid-cols-3 md:grid-cols-2 grid-col-1">
+                        <div className="grid xl:grid-cols-4 gap-x-4 gap-y-5 lg:grid-cols-3 md:grid-cols-2 grid-col-1">
                             {items.map((item) => (
                                 <ItemCard item={item} key={item.id}/>
                             ))}
