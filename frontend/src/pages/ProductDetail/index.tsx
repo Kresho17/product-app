@@ -68,7 +68,7 @@ export function ProductDetail() {
                             <p className="font-medium text-2xl leading-8 py-1">Brand: {item?.brand}</p>
                             <p className="font-medium text-2xl leading-8 py-1">Category: {item?.category}</p>
                         </div>
-                        <p className="text-xl text-white w-32 h-10 rounded-full bg-violet-700 font-semibold flex items-center justify-center">{'-' + item?.discountPercentage + '%'}</p>
+                        <p className="text-xl text-white w-32 h-10 rounded-full bg-violet-700 font-semibold flex items-center justify-center my-3">{'-' + item?.discountPercentage + '%'}</p>
                         <div className="flex flex-row justify-between items-center text-gray-800">
                             <p className="text-6xl font-semibold">
                                 {Math.floor(item?.price) + " $"}
