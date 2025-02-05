@@ -1,5 +1,6 @@
 import { truncateText } from "../utils/textUtils";
 import { useNavigate } from "react-router-dom";
+import { DiscountBadge } from './DiscountBadge';
 
 // TODO: Find the place for this
 export interface ItemDeatils {
@@ -30,9 +31,7 @@ export function ItemCard({ item }: Props) {
         <div className="border border-slate-200 w-75 h-80 rounded-lg bg-white flex flex-col items-center justify-between p-4 pb-6">
             <div className="relative inline-block w-full h-35 rounded-lg overflow-hidden">
                 <img src={item.images[0]} alt="itemThumbnail" className="object-contain w-full h-full rounded-lg"/>
-                <div className="absolute top-2 right-2 text-sm text-white w-20 h-7 rounded-full bg-violet-700 font-semibold flex items-center justify-center"> {/* TODO: CREATE A component for this */}
-                    <p className="">{'-' + item.discountPercentage + '%'}</p>
-                </div>
+                <DiscountBadge discountPercentage={item.discountPercentage} className="absolute top-2 right-2 text-sm " />
             </div>
             {/* TEXT */}
             <div className="w-full flex-grow flex flex-col items-center text-center justify-between pt-1.5 text-gray-800">

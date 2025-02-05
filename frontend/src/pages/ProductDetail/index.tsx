@@ -1,16 +1,29 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { truncateText } from "../../utils/textUtils";
 import { ProductSlider } from "./slider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from "react";
 import StarIcon from "../../utils/icons";
+import { DiscountBadge } from "../../components/DiscountBadge";
+
+export interface ItemDeatils {
+    id:                 number;
+    title:              string;
+    description:        string;
+    discountPercentage: number;
+    price:              number;
+    rating:             number;
+    stock:              number;
+    brand:              string;
+    category:           string;
+    images:             string[];
+}
 
 
 export function ProductDetail() {
     const navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [item, setItem] = useState<any>(null);
+    const [item, setItem] = useState<ItemDeatils>();
 
     const notify = (note : string) => {
         toast(note + " 🛒")
@@ -53,7 +66,7 @@ export function ProductDetail() {
                             <div className="text-2xl font-semibold flex flex-row items-centes justify-between space-x-3">
                                 <div className="flex items-center">
                                 {[...Array(5)].map((_, index) => (
-                                    <StarIcon key={index} color={index < (Math.floor(item?.rating)) ? "#7f22fe" : "silver"} />
+                                    <StarIcon key={index} color={index < (Math.floor(item?.rating ?? 0)) ? "#7f22fe" : "silver"} />
                                 ))}
                                 </div>
                                 <div className="flex items-center">
@@ -68,10 +81,10 @@ export function ProductDetail() {
                             <p className="font-medium text-2xl leading-8 py-1">Brand: {item?.brand}</p>
                             <p className="font-medium text-2xl leading-8 py-1">Category: {item?.category}</p>
                         </div>
-                        <p className="text-xl text-white w-32 h-10 rounded-full bg-violet-700 font-semibold flex items-center justify-center my-3">{'-' + item?.discountPercentage + '%'}</p>
-                        <div className="flex flex-row justify-between items-center text-gray-800">
-                            <p className="text-6xl font-semibold">
-                                {Math.floor(item?.price) + " $"}
+                        <DiscountBadge discountPercentage={item?.discountPercentage ?? 0} className="text-xl w-32 h-10 my-3"/>
+                        <div className="flex flex-row justify-between items-center">
+                            <p className="text-6xl font-semibold text-gray-800">
+                                {Math.floor(item?.price ?? 0) + " $"}
                             </p>
                             <button className="w-70 h-16 rounded-full bg-black text-white font-semibold text-3xl cursor-pointer" onClick={() => notify("Add to cart!")}>
                                 Add to cart
