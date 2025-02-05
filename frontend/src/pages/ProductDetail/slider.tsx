@@ -18,24 +18,24 @@ export function ProductSlider({ images } : Props) {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        nextArrow: <SampleNextArrow to="next"/>,
-        prevArrow: <SamplePrevArrow to="prev"/>
+        nextArrow: <SampleNextArrow className={"text-black"} />,
+        prevArrow: <SamplePrevArrow className={"text-black"} />
       };
 
-    function SampleNextArrow(props) {
+    function SampleNextArrow(props: { className?: any; onClick?: any; }) {
         const { className, onClick } = props;
         return(
           <div onClick={onClick} className={`arrow ${className}`} >
-            <ChevronRight className="arrows" style={{color:"black"}}/>
+            <ChevronRight className="arrows"/>
           </div>
         );
     }
       
-    function SamplePrevArrow(props) {
+    function SamplePrevArrow(props: { className?: any; onClick?: any; }) {
         const { className, onClick } = props;
         return(
           <div onClick={onClick} className={`arrow ${className}`} >
-            <ChevronLeft className="arrows" style={{color:"black"}}/>
+            <ChevronLeft className="arrows"/>
           </div>
         )
     }
@@ -43,8 +43,8 @@ export function ProductSlider({ images } : Props) {
     return(
         <>
           <Slider {...settings} className="w-4/12">
-            {images?.map((i) => (
-              <img src={i} alt="Product Image" key={i} className="w-lg h-120 rounded-md object-contain mx-auto"/>
+            {images?.map((i, index) => (
+              <img src={i} alt="Product Image" key={index} className="w-lg h-120 rounded-md object-contain mx-auto"/>
             ))}
           </Slider>
         </>
